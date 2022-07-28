@@ -24,6 +24,7 @@ extension UIViewController {
 
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
 
     @IBOutlet weak var searchTableView: UITableView!
     
@@ -42,7 +43,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
 
     }
-    
+//
+//    func configureView() {
+//        searchTableView.backgroundColor = .clear
+//        searchTableView.separatorColor = .clear
+//        searchTableView.row
+//    }
+//
+//    func configureLabel() {
+//        <#code#>
+//    }
+//
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100
