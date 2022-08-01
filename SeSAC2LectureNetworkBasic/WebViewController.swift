@@ -9,7 +9,8 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-
+//    static var reuseIdentifier: String = String(describing: WebViewController.self) // "WebViewController"
+    
     @IBOutlet weak var webSearchBar: UISearchBar!
     
     @IBOutlet weak var webView: WKWebView!
@@ -55,7 +56,6 @@ class WebViewController: UIViewController {
 
 extension WebViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        openWebPage(url: searchBar.text!)
         openWebPage(to: searchBar.text!)
         print(#function)
     }

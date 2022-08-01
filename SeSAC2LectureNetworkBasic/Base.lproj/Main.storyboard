@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NfZ-dv-Avj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mym-Hm-eka">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -47,6 +47,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="sFL-Wx-j9N">
+            <objects>
+                <viewController id="mtv-Zl-u0N" customClass="LocationViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cD0-Tc-enL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ae-01-tgm">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KEl-P6-Zr2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Local Notification">
+                                    <fontDescription key="titleFontDescription" name="GangwonEduAll-OTFBold" family="GangwonEduAll OTF" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="notificationButtonClicked:" destination="mtv-Zl-u0N" eventType="touchUpInside" id="aw6-OO-bQ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tcy-CB-m03"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ae-01-tgm" firstAttribute="top" secondItem="tcy-CB-m03" secondAttribute="top" constant="20" id="6HN-rW-m3z"/>
+                            <constraint firstItem="tcy-CB-m03" firstAttribute="trailing" secondItem="4ae-01-tgm" secondAttribute="trailing" constant="20" id="Rmq-7x-udV"/>
+                            <constraint firstItem="4ae-01-tgm" firstAttribute="leading" secondItem="tcy-CB-m03" secondAttribute="leading" constant="20" id="kPf-ha-bxb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGb-kd-V5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="781"/>
         </scene>
         <!--Lotto View Controller-->
         <scene sceneID="hjs-wY-3qw">
@@ -130,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="83.705357142857139"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Translate View Controller-->
         <scene sceneID="ovD-Jp-W6m">
             <objects>
-                <viewController id="7Lk-7G-9fw" customClass="WebViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Lk-7G-9fw" customClass="TranslateViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rns-I3-A0b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,12 +235,12 @@
                                             <action selector="goBackButtonClicked:" destination="NfZ-dv-Avj" id="N7S-Cm-CIN"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8UK-ss-C9i"/>
                                     <barButtonItem title="새로고침" id="y5P-HB-YHy">
                                         <connections>
                                             <action selector="reloadButtonClicked:" destination="NfZ-dv-Avj" id="wZ2-Hw-cIX"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8UK-ss-C9i"/>
                                     <barButtonItem image="arrow.right" catalog="system" id="2qu-XV-7Z3">
                                         <connections>
                                             <action selector="goForwardButtonClicked:" destination="NfZ-dv-Avj" id="gjQ-kD-lNL"/>

@@ -25,11 +25,15 @@ class ViewController: UIViewController, ViewPresentableProtocol {
         }
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        UserDefaultsHelper.standard.nickName = "고래밥"
+        
+        title = UserDefaultsHelper.standard.nickName
+        
+        UserDefaultsHelper.standard.age = 80
+        print(UserDefaultsHelper.standard.age)
     }
 
     func configureView() {

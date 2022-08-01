@@ -38,3 +38,5 @@ rate.KRW = 5000000
 rate.currencyRate = 1350
 rate.KRW = 5000000
 
+
+
