@@ -64,10 +64,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         searchBar.delegate = self
         
-        
-        requestBoxOffice(text: "20220801")
+        requestBoxOffice(text: checkYesterday())
     }
 
+    func checkYesterday() -> String {
+        let nowDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let yesterday = nowDate.addingTimeInterval(-86400)
+        return dateFormatter.string(from: yesterday)
+    }
+    
     func configureView() {
         searchTableView.backgroundColor = .clear
         searchTableView.separatorColor = .clear
