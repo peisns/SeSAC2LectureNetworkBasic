@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3549CD01289934710078E266 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3549CD00289934710078E266 /* Kingfisher */; };
+		35667D732898A9F70076F1E4 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D722898A9F70076F1E4 /* BeerViewController.swift */; };
+		35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */; };
 		35A749D328923B5B0000F619 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A749D228923B5B0000F619 /* WebViewController.swift */; };
 		35AC94C62890DE9F0014E032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C52890DE9F0014E032 /* AppDelegate.swift */; };
 		35AC94C82890DE9F0014E032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C72890DE9F0014E032 /* SceneDelegate.swift */; };
@@ -30,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35667D722898A9F70076F1E4 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		35A749D228923B5B0000F619 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		35AC94C22890DE9F0014E032 /* SeSAC2LectureNetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2LectureNetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AC94C52890DE9F0014E032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3549CD01289934710078E266 /* Kingfisher in Frameworks */,
 				35C4E0FA28977D0900D9E05E /* SwiftyJSON in Frameworks */,
 				35C4E0F728977D0000D9E05E /* Alamofire in Frameworks */,
 			);
@@ -69,6 +75,7 @@
 		35AC94B92890DE9F0014E032 = {
 			isa = PBXGroup;
 			children = (
+				35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */,
 				35AC94C42890DE9F0014E032 /* SeSAC2LectureNetworkBasic */,
 				35AC94C32890DE9F0014E032 /* Products */,
 			);
@@ -93,6 +100,7 @@
 				35A749D228923B5B0000F619 /* WebViewController.swift */,
 				35AC94C92890DE9F0014E032 /* ViewController.swift */,
 				35AC94CB2890DE9F0014E032 /* Main.storyboard */,
+				35667D722898A9F70076F1E4 /* BeerViewController.swift */,
 				35EB8FA828935D5D006A1101 /* LocationViewController.swift */,
 				35AC94E72892306D0014E032 /* TranslateViewController.swift */,
 				35AC94E5289223780014E032 /* LottoViewController.swift */,
@@ -152,6 +160,7 @@
 			packageProductDependencies = (
 				35C4E0F628977D0000D9E05E /* Alamofire */,
 				35C4E0F928977D0900D9E05E /* SwiftyJSON */,
+				3549CD00289934710078E266 /* Kingfisher */,
 			);
 			productName = SeSAC2LectureNetworkBasic;
 			productReference = 35AC94C22890DE9F0014E032 /* SeSAC2LectureNetworkBasic.app */;
@@ -184,6 +193,7 @@
 			packageReferences = (
 				35C4E0F528977D0000D9E05E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				35C4E0F828977D0900D9E05E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3549CCFF289934710078E266 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 35AC94C32890DE9F0014E032 /* Products */;
 			projectDirPath = "";
@@ -216,6 +226,8 @@
 			files = (
 				35AC94CA2890DE9F0014E032 /* ViewController.swift in Sources */,
 				35C4E0F428975FB800D9E05E /* UserDefaultsHelper.swift in Sources */,
+				35667D732898A9F70076F1E4 /* BeerViewController.swift in Sources */,
+				35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */,
 				35A749D328923B5B0000F619 /* WebViewController.swift in Sources */,
 				35AC94C62890DE9F0014E032 /* AppDelegate.swift in Sources */,
 				35AC94DA2890E1FD0014E032 /* SearchViewController.swift in Sources */,
@@ -446,6 +458,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3549CCFF289934710078E266 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		35C4E0F528977D0000D9E05E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -465,6 +485,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3549CD00289934710078E266 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3549CCFF289934710078E266 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		35C4E0F628977D0000D9E05E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35C4E0F528977D0000D9E05E /* XCRemoteSwiftPackageReference "Alamofire" */;

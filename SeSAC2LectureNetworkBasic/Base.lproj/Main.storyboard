@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mym-Hm-eka">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Lk-7G-9fw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -41,6 +41,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="XY1-BJ-JJ5" id="jT8-oi-ChR"/>
                         <outlet property="searchTableView" destination="vII-6V-TqT" id="HJ4-94-cX0"/>
                     </connections>
                 </viewController>
@@ -82,6 +83,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGb-kd-V5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29" y="781"/>
+        </scene>
+        <!--Beer View Controller-->
+        <scene sceneID="hi6-ys-bio">
+            <objects>
+                <viewController storyboardIdentifier="BeerViewController" id="1rN-P7-7Gn" customClass="BeerViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9wD-Kj-8jf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-zz-eH2">
+                                <rect key="frame" x="166" y="75" width="82" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="1rN-P7-7Gn" eventType="touchUpInside" id="4UQ-ti-9GE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7L-ez-rmP">
+                                <rect key="frame" x="115" y="193" width="185" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4Z-ro-dM8">
+                                <rect key="frame" x="87" y="374" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfD-sD-V5u">
+                                <rect key="frame" x="73" y="258" width="269" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uqi-CW-lCW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="beerImageView" destination="V4Z-ro-dM8" id="rIG-pL-KMx"/>
+                        <outlet property="descriptionLabel" destination="zfD-sD-V5u" id="A3c-Dn-jCf"/>
+                        <outlet property="nameLabel" destination="q7L-ez-rmP" id="lGB-6K-OcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3y-iX-hK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="780.80357142857144"/>
         </scene>
         <!--Lotto View Controller-->
         <scene sceneID="hjs-wY-3qw">
@@ -159,6 +209,13 @@
                     </view>
                     <connections>
                         <outlet property="numberTextField" destination="gJd-4Y-G7L" id="0d6-He-aIs"/>
+                        <outletCollection property="lottoNumberCollection" destination="Wc6-35-LnG" collectionClass="NSMutableArray" id="Jwo-wq-EBE"/>
+                        <outletCollection property="lottoNumberCollection" destination="bx0-n3-tQf" collectionClass="NSMutableArray" id="g4Y-cm-XSq"/>
+                        <outletCollection property="lottoNumberCollection" destination="X5G-cL-uNU" collectionClass="NSMutableArray" id="3SM-Ne-mwC"/>
+                        <outletCollection property="lottoNumberCollection" destination="Pkp-5d-TmD" collectionClass="NSMutableArray" id="nj9-79-fCK"/>
+                        <outletCollection property="lottoNumberCollection" destination="K9c-Bt-C9x" collectionClass="NSMutableArray" id="9r6-me-ij6"/>
+                        <outletCollection property="lottoNumberCollection" destination="f1m-AS-Jk9" collectionClass="NSMutableArray" id="O4Z-1n-bon"/>
+                        <outletCollection property="lottoNumberCollection" destination="b6P-dY-Z1q" collectionClass="NSMutableArray" id="xsC-t1-m3l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5U-pE-3u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,6 +249,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-th-Zkv">
+                                <rect key="frame" x="150" y="362" width="114" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="번역하기"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="7Lk-7G-9fw" eventType="touchUpInside" id="fFF-Jm-I7Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FGk-6P-IHH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,12 +268,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="translatedTextView" destination="IAn-XB-n2D" id="XEm-D3-9vm"/>
                         <outlet property="userInputTextView" destination="Em6-Rs-Hq0" id="sf1-0m-QHg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vot-mz-eqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="84"/>
+            <point key="canvasLocation" x="1837.68115942029" y="83.705357142857139"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="aOp-C1-AQY">

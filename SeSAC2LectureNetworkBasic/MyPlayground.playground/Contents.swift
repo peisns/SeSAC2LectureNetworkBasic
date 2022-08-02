@@ -40,3 +40,7 @@ rate.KRW = 5000000
 
 
 
+print("=====")
+
+var date = Date()
+print(date)

@@ -13,7 +13,10 @@ import SwiftyJSON
 class LottoViewController: UIViewController {
     
     @IBOutlet weak var numberTextField: UITextField!
-//    @IBOutlet weak var lottoPickerView: UIPickerView!
+
+    @IBOutlet var lottoNumberCollection: [UILabel]!
+    
+    
     
     var lottoPickerView = UIPickerView()
     
@@ -34,7 +37,7 @@ class LottoViewController: UIViewController {
     func requestLotto(number: Int) {
         
         //AF: 200~299 status code
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -47,7 +50,28 @@ class LottoViewController: UIViewController {
                 let date = json["drwNoDate"].stringValue
                 print(date)
                 
+                print("==1==")
                 self.numberTextField.text = date
+                
+                var lottoNumArray: [String] = []
+                var lottoNumIndex = 1
+                for _ in 1...6 {
+                    lottoNumArray.append(String(json["drwtNo\(lottoNumIndex)"].intValue))
+                    lottoNumIndex += 1
+                }
+                print(lottoNumArray)
+                
+                var lottoLabelIndex = 0
+                for num in self.lottoNumberCollection {
+                    if lottoLabelIndex < 6 {
+                        num.text = lottoNumArray[lottoLabelIndex]
+                    } else {
+                        num.text = String(bonus)
+                    }
+                    lottoLabelIndex += 1
+                }
+                
+                
                 
             case .failure(let error):
                 print(error)
@@ -67,7 +91,8 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         requestLotto(number: numberList[row])
-//        numberTextField.text = "\(numberList[row])회차"
+        print("==2==")
+        numberTextField.text = "\(numberList[row])회차"
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(numberList[row])회차"
