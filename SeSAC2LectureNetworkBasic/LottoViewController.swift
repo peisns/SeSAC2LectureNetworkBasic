@@ -21,7 +21,7 @@ class LottoViewController: UIViewController {
     var lottoPickerView = UIPickerView()
     
     
-    let numberList: [Int] = Array(1...1025).reversed()
+    var numberList: [Int] = Array(1...1025).reversed()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,21 @@ class LottoViewController: UIViewController {
 
         numberTextField.inputView = lottoPickerView
         
-        requestLotto(number: 1025)
+        var newNumber = checkDate()
+        requestLotto(number: newNumber)
+    }
+    
+    func checkDate() -> Int {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let nowDate = Date()
+        let date1026 = "2022-07-23 00:00:00"
+        let convertDate1026 = dateformatter.date(from: date1026)!
+        let interval = nowDate.timeIntervalSince(convertDate1026)
+        let newNumber = 1025 + Int(interval / (86400 * 7))
+        numberList.insert(newNumber, at: 0)
+        return newNumber
     }
     
     func requestLotto(number: Int) {
