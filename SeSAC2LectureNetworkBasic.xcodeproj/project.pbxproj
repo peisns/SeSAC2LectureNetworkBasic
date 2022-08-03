@@ -26,6 +26,7 @@
 		35AC94E328920CD90014E032 /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */; };
 		35AC94E6289223780014E032 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E5289223780014E032 /* LottoViewController.swift */; };
 		35AC94E82892306D0014E032 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E72892306D0014E032 /* TranslateViewController.swift */; };
+		35C0CD1A289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0CD19289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift */; };
 		35C38A88289974AD00E3A4A3 /* BeerListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */; };
 		35C38A8A2899754300E3A4A3 /* BeerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */; };
 		35C4E0EF2897528400D9E05E /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4E0EE2897528400D9E05E /* ReusableViewProtocol.swift */; };
@@ -59,6 +60,7 @@
 		35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		35AC94E5289223780014E032 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		35AC94E72892306D0014E032 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		35C0CD19289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewController.swift; sourceTree = "<group>"; };
 		35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewCell.swift; sourceTree = "<group>"; };
 		35C4E0EE2897528400D9E05E /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				35AC94C92890DE9F0014E032 /* ViewController.swift */,
 				35AC94CB2890DE9F0014E032 /* Main.storyboard */,
 				3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */,
+				35C0CD19289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift */,
 				35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */,
 				35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */,
 				35667D722898A9F70076F1E4 /* BeerViewController.swift */,
@@ -258,6 +261,7 @@
 				3579FB46289A6700005A13F3 /* Key.swift in Sources */,
 				35C4E0EF2897528400D9E05E /* ReusableViewProtocol.swift in Sources */,
 				35AC94DF2890E4E00014E032 /* ListTableViewCell.swift in Sources */,
+				35C0CD1A289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift in Sources */,
 				35C4E0F2289757AA00D9E05E /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
