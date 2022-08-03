@@ -68,11 +68,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func checkYesterday() -> String {
-        let nowDate = Date()
+//        let nowDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
-        let yesterday = nowDate.addingTimeInterval(-86400)
-        return dateFormatter.string(from: yesterday)
+//        let yesterday = nowDate.addingTimeInterval(-86400)
+//        let dateResult = Date(timeIntervalSinceNow: -86400)
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date() )!
+        let dateResult = dateFormatter.string(from: yesterday)
+    
+        return dateResult
     }
     
     func configureView() {

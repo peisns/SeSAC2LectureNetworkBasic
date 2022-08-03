@@ -10,6 +10,7 @@
 		3549CD01289934710078E266 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3549CD00289934710078E266 /* Kingfisher */; };
 		35667D732898A9F70076F1E4 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D722898A9F70076F1E4 /* BeerViewController.swift */; };
 		35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */; };
+		3579FB42289A0959005A13F3 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */; };
 		35A749D328923B5B0000F619 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A749D228923B5B0000F619 /* WebViewController.swift */; };
 		35AC94C62890DE9F0014E032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C52890DE9F0014E032 /* AppDelegate.swift */; };
 		35AC94C82890DE9F0014E032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C72890DE9F0014E032 /* SceneDelegate.swift */; };
@@ -23,6 +24,8 @@
 		35AC94E328920CD90014E032 /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */; };
 		35AC94E6289223780014E032 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E5289223780014E032 /* LottoViewController.swift */; };
 		35AC94E82892306D0014E032 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E72892306D0014E032 /* TranslateViewController.swift */; };
+		35C38A88289974AD00E3A4A3 /* BeerListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */; };
+		35C38A8A2899754300E3A4A3 /* BeerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */; };
 		35C4E0EF2897528400D9E05E /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4E0EE2897528400D9E05E /* ReusableViewProtocol.swift */; };
 		35C4E0F2289757AA00D9E05E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4E0F1289757AA00D9E05E /* Constant.swift */; };
 		35C4E0F428975FB800D9E05E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4E0F328975FB800D9E05E /* UserDefaultsHelper.swift */; };
@@ -35,6 +38,7 @@
 /* Begin PBXFileReference section */
 		35667D722898A9F70076F1E4 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
+		3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		35A749D228923B5B0000F619 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		35AC94C22890DE9F0014E032 /* SeSAC2LectureNetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2LectureNetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AC94C52890DE9F0014E032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		35AC94E5289223780014E032 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		35AC94E72892306D0014E032 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewController.swift; sourceTree = "<group>"; };
+		35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewCell.swift; sourceTree = "<group>"; };
 		35C4E0EE2897528400D9E05E /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		35C4E0F1289757AA00D9E05E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		35C4E0F328975FB800D9E05E /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				35A749D228923B5B0000F619 /* WebViewController.swift */,
 				35AC94C92890DE9F0014E032 /* ViewController.swift */,
 				35AC94CB2890DE9F0014E032 /* Main.storyboard */,
+				3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */,
+				35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */,
+				35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */,
 				35667D722898A9F70076F1E4 /* BeerViewController.swift */,
 				35EB8FA828935D5D006A1101 /* LocationViewController.swift */,
 				35AC94E72892306D0014E032 /* TranslateViewController.swift */,
@@ -230,7 +239,10 @@
 				35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */,
 				35A749D328923B5B0000F619 /* WebViewController.swift in Sources */,
 				35AC94C62890DE9F0014E032 /* AppDelegate.swift in Sources */,
+				35C38A88289974AD00E3A4A3 /* BeerListCollectionViewController.swift in Sources */,
 				35AC94DA2890E1FD0014E032 /* SearchViewController.swift in Sources */,
+				3579FB42289A0959005A13F3 /* ImageSearchViewController.swift in Sources */,
+				35C38A8A2899754300E3A4A3 /* BeerListCollectionViewCell.swift in Sources */,
 				35AC94E6289223780014E032 /* LottoViewController.swift in Sources */,
 				35EB8FA928935D5D006A1101 /* LocationViewController.swift in Sources */,
 				35AC94C82890DE9F0014E032 /* SceneDelegate.swift in Sources */,
