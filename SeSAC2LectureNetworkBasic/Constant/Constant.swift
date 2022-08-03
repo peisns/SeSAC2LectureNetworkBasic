@@ -7,13 +7,16 @@
 
 import Foundation
 
+
+
+
 //enum StoryboardName: String {
 //case Main
 //case Search
 //case Setting
 //}
 
-struct StoryboardName {
+//struct StoryboardName {
     
     //접근제어를 활용을 위한 초기화 방지
     //private는 해당 파일에서만 사용할 수 있도록 만듦, 다른 파일에서 사용불가
@@ -42,4 +45,4 @@ enum StoryboardName {
 //    case caption = "AppleSandol"
 //}
 
-}
+//}

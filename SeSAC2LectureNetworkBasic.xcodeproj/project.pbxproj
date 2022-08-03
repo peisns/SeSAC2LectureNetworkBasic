@@ -11,6 +11,8 @@
 		35667D732898A9F70076F1E4 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D722898A9F70076F1E4 /* BeerViewController.swift */; };
 		35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */; };
 		3579FB42289A0959005A13F3 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */; };
+		3579FB44289A66C1005A13F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3579FB43289A66C0005A13F3 /* .gitignore */; };
+		3579FB46289A6700005A13F3 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579FB45289A6700005A13F3 /* Key.swift */; };
 		35A749D328923B5B0000F619 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A749D228923B5B0000F619 /* WebViewController.swift */; };
 		35AC94C62890DE9F0014E032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C52890DE9F0014E032 /* AppDelegate.swift */; };
 		35AC94C82890DE9F0014E032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94C72890DE9F0014E032 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 		35667D722898A9F70076F1E4 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		3579FB41289A0959005A13F3 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		3579FB43289A66C0005A13F3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3579FB45289A6700005A13F3 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		35A749D228923B5B0000F619 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		35AC94C22890DE9F0014E032 /* SeSAC2LectureNetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2LectureNetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AC94C52890DE9F0014E032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 		35AC94B92890DE9F0014E032 = {
 			isa = PBXGroup;
 			children = (
-				35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */,
+				3579FB43289A66C0005A13F3 /* .gitignore */,
 				35AC94C42890DE9F0014E032 /* SeSAC2LectureNetworkBasic */,
 				35AC94C32890DE9F0014E032 /* Products */,
 			);
@@ -102,6 +106,7 @@
 				35EB8FAA289384E0006A1101 /* Resource */,
 				35AC94E428920CE50014E032 /* Protocol */,
 				35AC94C52890DE9F0014E032 /* AppDelegate.swift */,
+				35667D742898BD1D0076F1E4 /* BoxOfficeModel.swift */,
 				35AC94C72890DE9F0014E032 /* SceneDelegate.swift */,
 				35A749D228923B5B0000F619 /* WebViewController.swift */,
 				35AC94C92890DE9F0014E032 /* ViewController.swift */,
@@ -116,6 +121,7 @@
 				35AC94D92890E1FD0014E032 /* SearchViewController.swift */,
 				35AC94DD2890E4E00014E032 /* ListTableViewCell.swift */,
 				35AC94DE2890E4E00014E032 /* ListTableViewCell.xib */,
+				3579FB45289A6700005A13F3 /* Key.swift */,
 				35AC94CE2890DEA10014E032 /* Assets.xcassets */,
 				35AC94D02890DEA10014E032 /* LaunchScreen.storyboard */,
 				35AC94E128910CB20014E032 /* MyPlayground.playground */,
@@ -222,6 +228,7 @@
 				35AC94E02890E4E00014E032 /* ListTableViewCell.xib in Resources */,
 				35EB8FAC289384FC006A1101 /* 강원교육모두 Bold.otf in Resources */,
 				35AC94CF2890DEA10014E032 /* Assets.xcassets in Resources */,
+				3579FB44289A66C1005A13F3 /* .gitignore in Resources */,
 				35AC94CD2890DE9F0014E032 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +255,7 @@
 				35AC94C82890DE9F0014E032 /* SceneDelegate.swift in Sources */,
 				35AC94E82892306D0014E032 /* TranslateViewController.swift in Sources */,
 				35AC94E328920CD90014E032 /* ViewPresentableProtocol.swift in Sources */,
+				3579FB46289A6700005A13F3 /* Key.swift in Sources */,
 				35C4E0EF2897528400D9E05E /* ReusableViewProtocol.swift in Sources */,
 				35AC94DF2890E4E00014E032 /* ListTableViewCell.swift in Sources */,
 				35C4E0F2289757AA00D9E05E /* Constant.swift in Sources */,
