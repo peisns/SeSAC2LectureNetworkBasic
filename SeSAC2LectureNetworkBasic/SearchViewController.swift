@@ -9,6 +9,7 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 /*
  Swift Protocol
@@ -48,7 +49,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var searchTableView: UITableView!
     
+    //BoxOffice 배열
     var list: [BoxOfficeModel] = []
+    //ProgressView
+    let hud = JGProgressHUD()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,10 +98,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //인증키는 제한이 있음, kobis의 경우 3000회
     func requestBoxOffice(text: String) {
         
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+        
         list.removeAll() // 로딩바 제공
         
         let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(text)"
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -117,12 +126,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
                 
                
-                
+                //테이블 뷰 갱신
                 self.searchTableView.reloadData()
-                
+                self.hud.dismiss()
+
                 
             case .failure(let error):
+                self.hud.dismiss()
+
                 print(error)
+                
+                //시뮬레이터 실패 테스트 > 맥의 네트워크 상태에 따라서 테스트
+                
             }
         }
     }

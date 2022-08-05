@@ -26,6 +26,7 @@
 		35AC94E328920CD90014E032 /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */; };
 		35AC94E6289223780014E032 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E5289223780014E032 /* LottoViewController.swift */; };
 		35AC94E82892306D0014E032 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC94E72892306D0014E032 /* TranslateViewController.swift */; };
+		35AD76F8289CB41800B25B13 /* ImageSearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD76F7289CB41800B25B13 /* ImageSearchAPIManager.swift */; };
 		35C0CD1A289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0CD19289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift */; };
 		35C38A88289974AD00E3A4A3 /* BeerListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */; };
 		35C38A8A2899754300E3A4A3 /* BeerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */; };
@@ -34,6 +35,7 @@
 		35C4E0F428975FB800D9E05E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4E0F328975FB800D9E05E /* UserDefaultsHelper.swift */; };
 		35C4E0F728977D0000D9E05E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 35C4E0F628977D0000D9E05E /* Alamofire */; };
 		35C4E0FA28977D0900D9E05E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 35C4E0F928977D0900D9E05E /* SwiftyJSON */; };
+		35D61272289B4FD3008DF184 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 35D61271289B4FD3008DF184 /* JGProgressHUD */; };
 		35EB8FA928935D5D006A1101 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB8FA828935D5D006A1101 /* LocationViewController.swift */; };
 		35EB8FAC289384FC006A1101 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35EB8FAB289384FC006A1101 /* 강원교육모두 Bold.otf */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,7 @@
 		35AC94E228920CD90014E032 /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		35AC94E5289223780014E032 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		35AC94E72892306D0014E032 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		35AD76F7289CB41800B25B13 /* ImageSearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchAPIManager.swift; sourceTree = "<group>"; };
 		35C0CD19289A6F0B00B549D6 /* ImageSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		35C38A87289974AD00E3A4A3 /* BeerListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewController.swift; sourceTree = "<group>"; };
 		35C38A892899754300E3A4A3 /* BeerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D61272289B4FD3008DF184 /* JGProgressHUD in Frameworks */,
 				3549CD01289934710078E266 /* Kingfisher in Frameworks */,
 				35C4E0FA28977D0900D9E05E /* SwiftyJSON in Frameworks */,
 				35C4E0F728977D0000D9E05E /* Alamofire in Frameworks */,
@@ -84,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357E5A3C289CB3D100537833 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				35AD76F7289CB41800B25B13 /* ImageSearchAPIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		35AC94B92890DE9F0014E032 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 		35AC94C42890DE9F0014E032 /* SeSAC2LectureNetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				357E5A3C289CB3D100537833 /* APIManager */,
 				35C4E0F02897577D00D9E05E /* Constant */,
 				35EB8FAA289384E0006A1101 /* Resource */,
 				35AC94E428920CE50014E032 /* Protocol */,
@@ -179,6 +192,7 @@
 				35C4E0F628977D0000D9E05E /* Alamofire */,
 				35C4E0F928977D0900D9E05E /* SwiftyJSON */,
 				3549CD00289934710078E266 /* Kingfisher */,
+				35D61271289B4FD3008DF184 /* JGProgressHUD */,
 			);
 			productName = SeSAC2LectureNetworkBasic;
 			productReference = 35AC94C22890DE9F0014E032 /* SeSAC2LectureNetworkBasic.app */;
@@ -212,6 +226,7 @@
 				35C4E0F528977D0000D9E05E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				35C4E0F828977D0900D9E05E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				3549CCFF289934710078E266 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				35D61270289B4FD3008DF184 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 35AC94C32890DE9F0014E032 /* Products */;
 			projectDirPath = "";
@@ -244,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35AC94CA2890DE9F0014E032 /* ViewController.swift in Sources */,
+				35AD76F8289CB41800B25B13 /* ImageSearchAPIManager.swift in Sources */,
 				35C4E0F428975FB800D9E05E /* UserDefaultsHelper.swift in Sources */,
 				35667D732898A9F70076F1E4 /* BeerViewController.swift in Sources */,
 				35667D752898BD1D0076F1E4 /* BoxOfficeModel.swift in Sources */,
@@ -506,6 +522,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		35D61270289B4FD3008DF184 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -523,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 35C4E0F828977D0900D9E05E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		35D61271289B4FD3008DF184 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D61270289B4FD3008DF184 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

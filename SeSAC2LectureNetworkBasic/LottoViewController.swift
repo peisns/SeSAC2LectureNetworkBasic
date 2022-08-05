@@ -52,7 +52,7 @@ class LottoViewController: UIViewController {
         
         //AF: 200~299 status code
         let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
-        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)

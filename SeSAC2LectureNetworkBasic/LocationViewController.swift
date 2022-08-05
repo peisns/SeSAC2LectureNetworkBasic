@@ -15,6 +15,7 @@ class LocationViewController: UIViewController {
     //Notification 1. 객체 가져오기
     let notificationCenter = UNUserNotificationCenter.current()
     
+    @IBOutlet weak var imageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -22,6 +23,29 @@ class LocationViewController: UIViewController {
         
         requestAuthorization()
     }
+    
+    @IBAction func downloadImage(_ sender: UIButton) {
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+        print("1", Thread.isMainThread)
+        
+        DispatchQueue.global().async {
+            print("2", Thread.isMainThread)
+            let data = try! Data(contentsOf: URL(string: url)!)
+            let image = UIImage(data: data)
+            
+            DispatchQueue.main.async {
+                self.imageView.image = image
+                print("3", Thread.isMainThread)
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
     
     @IBAction func notificationButtonClicked(_ sender: UIButton) {
         sendNotification()

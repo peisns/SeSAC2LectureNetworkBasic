@@ -42,7 +42,7 @@ class BeerListCollectionViewController: UICollectionViewController {
 
     func getBeerInfo() {
         let url = "https://api.punkapi.com/v2/beers"
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
