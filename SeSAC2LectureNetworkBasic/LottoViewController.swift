@@ -16,10 +16,7 @@ class LottoViewController: UIViewController {
 
     @IBOutlet var lottoNumberCollection: [UILabel]!
     
-    
-    
     var lottoPickerView = UIPickerView()
-    
     
     var numberList: [Int] = Array(1...1025).reversed()
     
@@ -31,7 +28,7 @@ class LottoViewController: UIViewController {
 
         numberTextField.inputView = lottoPickerView
         
-        var newNumber = checkDate()
+        let newNumber = checkDate()
         requestLotto(number: newNumber)
     }
     
@@ -44,7 +41,7 @@ class LottoViewController: UIViewController {
         let convertDate1026 = dateformatter.date(from: date1026)!
         let interval = nowDate.timeIntervalSince(convertDate1026)
         let newNumber = 1025 + Int(interval / (86400 * 7))
-        numberList.insert(newNumber, at: 0)
+        numberList = Array(1...newNumber).reversed()
         return newNumber
     }
     
@@ -56,36 +53,28 @@ class LottoViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
                 
                 let bonus = json["bnusNo"].intValue
-                print(bonus)
-                
                 let date = json["drwNoDate"].stringValue
-                print(date)
-                
-                print("==1==")
                 self.numberTextField.text = date
-                
                 var lottoNumArray: [String] = []
+
                 var lottoNumIndex = 1
                 for _ in 1...6 {
                     lottoNumArray.append(String(json["drwtNo\(lottoNumIndex)"].intValue))
                     lottoNumIndex += 1
                 }
+                lottoNumArray.append(String(bonus))
                 print(lottoNumArray)
-                
+
                 var lottoLabelIndex = 0
                 for num in self.lottoNumberCollection {
-                    if lottoLabelIndex < 6 {
-                        num.text = lottoNumArray[lottoLabelIndex]
-                    } else {
-                        num.text = String(bonus)
-                    }
+                    num.text = lottoNumArray[lottoLabelIndex]
                     lottoLabelIndex += 1
                 }
-                
-                
+                UserDefaults.standard.set(lottoNumArray, forKey: String(number))
+                print(String(number))
+
                 
             case .failure(let error):
                 print(error)
@@ -104,8 +93,17 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        requestLotto(number: numberList[row])
-        print("==2==")
+        guard let numberArray = UserDefaults.standard.stringArray(forKey: "\(numberList[row])") else {
+            requestLotto(number: numberList[row])
+            return }
+
+        var lottoLabelIndex = 0
+        for num in lottoNumberCollection {
+            num.text = numberArray[lottoLabelIndex]
+            lottoLabelIndex += 1
+        }
+//        requestLotto(number: numberList[row])
+//        print("==2==")
         numberTextField.text = "\(numberList[row])회차"
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
